@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Project</title>
+    <style>
+        .sub-btn {
+            background-color: black;
+            border-radius: 50px;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .is-subscribed {
+            background-color: grey;
+            color: black
+        }
+
+        input {
+            font-size: 15px;
+            padding: 10px;
+
+        }
+
+        .cal {
+            padding: 12px 15px;
+            background-color: rgb(22, 116, 22);
+            border: none;
+            color: white;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick=" subscribe();" class="sub-btn">Subscribe</button>
+
+
+    <br>
+    <br>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10 shipping.</p>
+
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input type="text" class="in" onkeydown="
+    if(event.key ==='Enter'){
+        calculate();
+    }"> <button onclick="calculate(); " class="cal">Calculate</button>
+
+    <p class="result"></p>
+    <script>
+        function subscribe() {
+            const btnElement = document.querySelector('.sub-btn');
+
+            if (btnElement.innerText === 'Subscribe') {
+                btnElement.innerHTML = 'Subscribed';
+                btnElement.classList.add('is-subscribed');
+            }
+            else {
+                btnElement.innerHTML = 'Subscribe';
+                btnElement.classList.remove('is-subscribed');
+            }
+
+        }
+
+        function calculate() {
+            const order = document.querySelector('.in');
+            let cost = Number(order.value);
+
+            if (cost <= 40) {
+                cost += 10;
+                console.log(cost);
+            }
+            document.querySelector('.result').innerHTML = `$${cost}`
+        }
+
+    </script>
+</body>
+
+</html>
