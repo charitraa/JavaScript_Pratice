@@ -26,3 +26,47 @@ if (bmi < 18.5) {
 } else {
   console.log('Obese')
 }
+
+let day = 2
+switch (day) {
+  case 1:
+    console.log('Sunday')
+    break
+  case 2:
+    console.log('Monday')
+    break
+  case 3:
+    console.log('Tuesday')
+    break
+  case 4:
+    console.log('Wednesday')
+    break
+  case 5:
+    console.log('Thursday')
+    break
+  case 6:
+    console.log('Friday')
+    break
+  case 7:
+    console.log('Saturday')
+    break
+  default:
+    console.log('Invalid day')
+    break
+}
+
+bmi = 20
+switch (true) {
+  case bmi < 18.5:
+    console.log('Underweight')
+    break
+  case bmi > 18.5 && bmi < 24:
+    console.log('Normal')
+    break
+  case bmi > 25 && bmi < 29.9:
+    console.log('Overweight')
+    break
+  case bmi > 30:
+    console.log('Obese')
+    break
+}
