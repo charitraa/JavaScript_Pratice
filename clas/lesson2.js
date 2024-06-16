@@ -1,8 +1,12 @@
 let marks = 85
 
+<<<<<<< HEAD
 if (marks >= 90) {
   console.log('A+')
 } else if (marks >= 80) {
+=======
+if (marks >= 80) {
+>>>>>>> 7af83a85b172e522effaf4eaed4288ec9b2b8e02
   console.log('A')
 } else if (marks >= 70) {
   console.log('B')
@@ -12,8 +16,11 @@ if (marks >= 90) {
   console.log('D')
 } else if (marks >= 40) {
   console.log('E')
+<<<<<<< HEAD
 } else {
   console.log('F')
+=======
+>>>>>>> 7af83a85b172e522effaf4eaed4288ec9b2b8e02
 }
 
 let bmi
@@ -74,6 +81,7 @@ switch (true) {
     console.log('Obese')
     break
 }
+<<<<<<< HEAD
 
 let a = 10
 
@@ -114,3 +122,5 @@ if ((d % 4 === 0 && d % 100 !== 0) || d % 400 === 0) {
   console.log('it is not a leap year')
 }
 dxbS
+=======
+>>>>>>> 7af83a85b172e522effaf4eaed4288ec9b2b8e02
